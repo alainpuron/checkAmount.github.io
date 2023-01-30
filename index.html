@@ -15,16 +15,23 @@
     <form onsubmit="calculateTip(); return false;">
 
         <label for="amount">Enter check amount $:</label>
-        <input type="number" id="totalAmount" name="amount">
-      <br>
+        <input type="number" id="totalAmount" name="amount" step=".01">
+        <br>
+        <br>
         <label for="tip">Enter the tip %:</label>
         <input type="number" id="tip" name="amount">
         <br>
         <br>
-        <input type="submit" value="Calculate"> 
+        <label for="people">Share:</label>
+        <input type="number" id="people" name="amount" min="2">
+        <br>
+        <br>
+        <button type="submit" value="Calculate"> Calculate</button> 
     </form>
     <p>Tip amount:$ <span id="tipAmount"></span></p>
     <p>Total amount:$ <span id="result"></span></p>
+    <p id="perShareDisplay">Per Share:$ <span id="perShare"></span></p>
+
 
     </div>
     
